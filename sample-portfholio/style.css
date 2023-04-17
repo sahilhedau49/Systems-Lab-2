@@ -1,0 +1,265 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+#root,
+body,
+html {
+  --color-red: #c9181f;
+  --color-light-black: #181e23;
+  --color-medium-black: #141512;
+  --color-dark-black: #000;
+  --color-white: #eff6e0;
+  background: #1a232c;
+  color: var(--color-white);
+  font-family: Poppins, sans-serif;
+  scroll-behavior: smooth;
+}
+
+nav {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  background: #0f0f0f;
+  color: var(--color-white);
+}
+.logo {
+  padding-top: 5px;
+  padding-left: 3rem;
+  font-family: "Source Code Pro", monospace;
+  cursor: pointer;
+}
+
+.navbar ul {
+  width: 60%;
+  display: flex;
+  padding-right: 3rem;
+  padding-top: 10px;
+}
+
+.navbar ul li {
+  list-style: none;
+  padding-left: 3rem;
+  font-size: larger;
+}
+
+.navbar ul li a {
+  color: var(--color-white);
+  text-decoration: none;
+  transition: 0.4s;
+}
+
+.navbar ul li a:hover {
+  color: var(--color-red);
+}
+
+.trans1 {
+  width: 100%;
+  height: 20px;
+  content: "";
+  background: var(--color-medium-black);
+}
+
+.trans2 {
+  width: 100%;
+  height: 20px;
+  content: "";
+  background: var(--color-light-black);
+}
+
+.home {
+  padding-top: 4rem;
+  width: 80%;
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+.home-left {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+
+.adjective {
+  padding-bottom: 1rem;
+}
+
+.name {
+  padding-bottom: 1rem;
+  font-size: 2.4rem;
+  transition: 0.2s;
+}
+
+.name span {
+  color: var(--color-red);
+}
+
+.name:hover {
+  text-shadow: 0px 0px 50px var(--color-red);
+}
+
+.desp {
+  font-size: 1.2rem;
+  padding-bottom: 2rem;
+}
+
+.home-btn {
+  width: fit-content;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-am {
+  margin-right: 1rem;
+  background: var(--color-white);
+  outline: none;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  padding: 13px 30px;
+  font-size: 1.1rem;
+  text-decoration: none;
+  color: var(--color-medium-black);
+  transition: 0.3s;
+}
+
+.btn-con {
+  background: var(--color-red);
+  outline: none;
+  border: 1px solid transparent;
+  padding: 13px 30px;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  color: var(--color-white);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-am:hover {
+  background: transparent;
+  border: 1px solid var(--color-white);
+  color: var(--color-white);
+}
+
+.btn-con:hover {
+  background: transparent;
+  border: 1px solid var(--color-red);
+  color: var(--color-red);
+}
+
+.home-rgt img {
+  width: 32rem;
+}
+
+.social {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  position: absolute;
+  right: 3rem;
+}
+
+.social a {
+  color: var(--color-white);
+  padding: 5px;
+  border: 2px solid var(--color-white);
+  margin: 10px;
+  border-radius: 50px;
+  text-align: center;
+}
+
+.social a i {
+  padding: 5px;
+  font-size: 2rem;
+  transition: 0.2s;
+}
+
+.social a i:hover {
+  color: var(--color-red);
+}
+
+.about-sec {
+  background: var(--color-medium-black);
+}
+
+.about {
+  width: 90%;
+  display: flex;
+  margin: auto;
+  justify-content: space-around;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+}
+
+.abt-lft {
+  text-align: center;
+  margin: auto;
+}
+
+.abt-rgt {
+  width: 60%;
+  text-align: justify;
+  padding-right: 6rem;
+}
+
+.row1 i,
+.row2 i {
+  width: 7rem;
+  font-size: 4rem;
+  margin: 1px;
+  padding: 20px;
+  border: 2px solid var(--color-light-black);
+  background: var(--color-light-black);
+  transition: 0.2s;
+}
+
+.row1 i:hover,
+.row2 i:hover {
+  border: 2px solid var(--color-red);
+}
+
+.row1 {
+  margin-bottom: 3px;
+}
+
+.abt-rgt h2 {
+  font-size: 20px;
+}
+
+.abt-rgt h3 {
+  font-size: 25px;
+  color: #c9181f;
+}
+
+.foot {
+  width: 90%;
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+}
+
+.ft-icon {
+  text-align: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eff6e0;
+}
+
+.ft-icon a {
+  font-size: 2rem;
+  padding: 10px;
+  color: #eff6e0;
+}
+
+.copy-rht {
+  padding-top: 20px;
+  letter-spacing: 0.8px;
+}

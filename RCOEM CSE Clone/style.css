@@ -1,0 +1,304 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+:root {
+  --main-bg: #fff8f2;
+}
+
+body {
+  background: var(--main-bg);
+}
+
+.banner {
+  width: 100%;
+  height: 50vh;
+  background: url("img/cse\ banner.jpg");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  border-top: 5px solid rgba(250, 151, 106, 0.5);
+}
+
+.banner h1 {
+  font-weight: lighter;
+  color: #000;
+  font-size: 3rem;
+  text-shadow: 3px 3px 5px rgb(210, 210, 210);
+}
+
+.ban-img {
+  width: 200px;
+  background: rgba(250, 151, 106, 0.8);
+  border-bottom-right-radius: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.menu {
+  margin-left: auto;
+  width: 12rem;
+  position: fixed;
+  top: 120px;
+  right: 0;
+}
+
+.menu ul li {
+  color: #fff;
+  list-style: none;
+  font-size: 30px;
+  margin: 10px 0;
+  padding: 10px 10px;
+  background: rgba(0, 0, 0, 0.5);
+  transition: 0.2s;
+}
+
+.menu ul li:hover {
+  transform: translateX(-20px);
+  background: #000;
+}
+
+.topics {
+  display: flex;
+  padding-top: 2rem;
+  width: 90vw;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.list {
+  width: 20%;
+}
+
+.list ul li:hover {
+  transform: scaleX(1.05);
+}
+
+.list ul {
+  list-style: none;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  text-align: start;
+}
+
+.list ul li {
+  padding: 10px 15px;
+  border-bottom: 5px solid var(--main-bg);
+  cursor: pointer;
+  color: #fff;
+  transition: 0.2s;
+}
+
+.list ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.list ul li:hover {
+  background: #ff7b23;
+  font-size: 1.05rem;
+}
+
+.tp-crt {
+  width: 35vw;
+  padding-bottom: 2rem;
+}
+
+.tp-crt h3 {
+  padding-bottom: 1rem;
+  font-size: larger;
+}
+
+.tp-crt .info {
+  background: #ffd7ae;
+  padding: 2rem 2rem;
+  height: 500px;
+}
+
+.link1 {
+  display: flex;
+  flex-direction: column;
+}
+
+.tp-crt .info .link1 a {
+  padding: 15px 20px;
+  background: #333;
+  margin-top: 1rem;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: 0.2s;
+}
+
+.link2 h3 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.link2 a {
+  padding: 15px 20px;
+  background: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: 0.2s;
+}
+
+.link1 a:hover,
+.link2 a:hover {
+  box-shadow: 5px 5px 10px rgb(255, 137, 63);
+  font-size: 1.02rem;
+}
+.hodimg {
+  margin: 20px 0;
+}
+
+.hodimg img {
+  width: 20vw;
+  transition: 0.3s;
+}
+
+.hodimg img:hover {
+  border-radius: 100px;
+  box-shadow: 0 0 50px rgb(255, 137, 63);
+}
+
+.hod-name {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  font-size: 1.3rem;
+  position: relative;
+  top: -50px;
+}
+
+.main-para {
+  background: rgba(129, 128, 126, 0.2);
+  border-top: 5px solid #666;
+}
+
+.paras {
+  width: 60%;
+  display: block;
+  margin: auto;
+  padding-bottom: 3rem;
+}
+
+.paras h4 {
+  font-size: 1.4rem;
+  padding-bottom: 10px;
+  padding-top: 20px;
+}
+
+.paras p,
+.paras ul {
+  font-size: 16px;
+  line-height: 1.4rem;
+}
+
+footer {
+  width: 100%;
+  background: rgba(129, 128, 126, 0.2);
+}
+
+.footer {
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  justify-content: space-between;
+  transition: 0.2s;
+  padding-bottom: 3rem;
+  padding-top: 3rem;
+}
+
+.footer-1,
+.footer-2,
+.footer-3 {
+  width: 30%;
+}
+
+.footer-1,
+.footer-2 {
+  border-right: 2px solid #333;
+}
+
+.footer-1 ul li,
+.footer-2 ul li,
+.footer-3 ul li {
+  list-style: none;
+  line-height: 1.4rem;
+  cursor: pointer;
+  color: #444;
+}
+
+.footer-1 ul li:hover,
+.footer-2 ul li:hover,
+.footer-3 ul li:hover {
+  color: #000;
+}
+
+.footer-1 h3,
+.footer-2 h3,
+.footer-3 h3 {
+  padding-bottom: 2rem;
+  padding-left: 0;
+  padding-top: 0;
+}
+
+.footer-3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.contact h4,
+.site h4 {
+  padding-bottom: 1rem;
+}
+
+.contact p,
+.site p {
+  line-height: 1.4rem;
+}
+
+.social i {
+  font-size: 2rem;
+  padding-right: 10px;
+}
+
+.social h3 {
+  font-size: 1.4rem;
+}
+
+i {
+  transition: 0.2s;
+}
+
+i:hover {
+  color: #ff8000;
+}
+
+.marquee {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  background: url(img/output-onlinepngtools.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.marquee img {
+  width: 20vw;
+  border-radius: 50px;
+  padding: 10px 20px;
+  z-index: 1px;
+}
