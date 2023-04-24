@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  background: linear-gradient(45deg, rgb(240, 176, 176), rgb(107, 255, 221));
+  justify-content: center;
+  min-height: 100vh;
+  align-items: center;
+}
+
+.tablemain {
+  width: 60vw;
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 30px;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+}
+
+.tablemain h1 {
+  font-size: 2rem;
+  padding-bottom: 2rem;
+}
+
+.firsttable tr th {
+  font-size: 1.2rem;
+}
+.firsttable tr th,
+.firsttable tr td {
+  padding: 10px;
+  background: #fff;
+  border-radius: 2px;
+}
+
+
+
+.reg h3 {
+  width: 20%;
+  margin: auto;
+  margin-top: 2rem;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 10px 20px;
+  border-radius: 10px;
+}
