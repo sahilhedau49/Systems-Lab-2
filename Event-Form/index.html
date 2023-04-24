@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Registration Form</title>
+  </head>
+  <body>
+    <section class="sec1">
+      <div class="main">
+        <div class="head">
+          <h2>Event Registration</h2>
+        </div>
+        <div class="form">
+          <form>
+            <div class="fill">
+              <div class="left">
+                <p>First Name:</p>
+                <input class="input-str" type="text" placeholder="First Name" />
+                <br />
+                <p>Last Name:</p>
+                <input class="input-str" type="text" placeholder="Last Name" />
+                <br />
+                <p>College:</p>
+                <input
+                  class="input-str"
+                  type="text"
+                  placeholder="College Name"
+                />
+                <br />
+                <p>Department Name:</p>
+                <input class="input-str" type="text" placeholder="Ex. CSE" />
+                <br />
+                <p class="add">Address:</p>
+                <textarea
+                  name="address"
+                  placeholder="Address"
+                  cols="30"
+                  rows="3"
+                  class="input-str"
+                ></textarea>
+                <br />
+                <p>Phone:</p>
+                <input class="input-str" type="text" placeholder="Phone no." />
+                <br />
+                <p>Email:</p>
+                <input
+                  class="input-str"
+                  type="text"
+                  placeholder="Ex. xyz@gmail.com"
+                />
+                <br />
+              </div>
+              <div class="right">
+                <label for="gender">Gender: </label><br />
+                <span class="input-radio">
+                  <input type="radio" name="gender" value="male" />Male
+                  <input type="radio" name="gender" value="female" />Female
+                </span>
+                <br />
+                <p style="margin-top: 5px"></p>
+                <label for="programme">Programme: </label><br />
+                <span class="input-radio">
+                  <input type="radio" name="programme" value="Btech" />B.Tech
+                  <input type="radio" name="programme" value="Mtech" />M.Tech
+                </span>
+                <br />
+                <p style="margin-top: 8px">Class:</p>
+                <select name="class" class="input-str">
+                  <option value="1st-sem">1st-sem</option>
+                  <option value="2nd-sem">2nd-sem</option>
+                  <option value="3rd-sem">3rd-sem</option>
+                  <option value="4th-sem">4th-sem</option>
+                  <option value="5th-sem">5th-sem</option>
+                  <option value="6th-sem">6th-sem</option>
+                </select>
+                <br />
+                <p>State:</p>
+                <input class="input-str" type="text" placeholder="State" />
+                <br />
+                <p>City:</p>
+                <input class="input-str" type="text" placeholder="City" />
+                <br />
+                <p class="event">Event:</p>
+                <span class="event-opts">
+                  <input type="checkbox" name="CP" />CP
+                  <input type="checkbox" name="WebDev" />Web Dev <br />
+                </span>
+                <span class="event-opts"
+                  ><input type="checkbox" name="Figma" />Figma
+                  <input type="checkbox" name="SoftSkill" />Soft Skill </span
+                ><br />
+
+                <p class="amt">Amount:</p>
+                <input class="input-str" type="text" placeholder="Rs." />
+                <br />
+                <p class="amt"></p>
+                <label for="paid">Amount Paid: </label>
+                <input type="radio" name="paid" value="true" />Yes
+                <input type="radio" name="paid" value="false" />No
+              </div>
+            </div>
+            <div class="btns">
+              <input type="submit" name="submit" value="Submit" />
+              <input type="reset" name="reset" value="Reset" />
+              <input type="button" name="ok" value="OK" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

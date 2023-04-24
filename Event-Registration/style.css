@@ -53,3 +53,13 @@ body {
   border-radius: 10px;
   cursor: pointer;
 }
+
+.reg h3 a {
+  text-decoration: none;
+  color: #000;
+}
+
+.reg h3 a:visited {
+  text-decoration: none;
+  color: #000;
+}
