@@ -12,11 +12,12 @@
   justify-content: center;
   align-items: center;
   background: linear-gradient(45deg, rgb(204, 255, 142), rgb(211, 255, 239));
+  /* background: url(/); */
 }
 
 .main {
   width: 50vw;
-  padding: 3rem;
+  padding: 1.4rem;
   background: rgba(0, 0, 0, 0.1);
   border-radius: 20px;
   border: 1px solid #fff;
@@ -41,7 +42,8 @@
 .left input,
 .right input,
 .left textarea,
-.right select {
+.right select,
+.btns input {
   margin-bottom: 10px;
   padding: 8px 10px;
   border-radius: 10px;
@@ -74,4 +76,13 @@ label {
 
 .amt {
   padding-top: 10px;
+}
+
+.btns {
+  text-align: center;
+  padding-top: 10px;
+}
+
+.btns input {
+  cursor: pointer;
 }
