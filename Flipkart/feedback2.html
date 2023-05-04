@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="feedback.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Feedback Form</title>
+  </head>
+  <body>
+    <div class="main">
+      <section>
+        <div class="info">
+          <div class="info-lft">
+            <h4>SELLER</h4>
+            <h3>Realme</h3>
+            <a href="#">View Seller Profile</a>
+          </div>
+          <div class="info-rht">
+            <div class="product">
+              <h3>Product</h3>
+              <img src="./images/phone.webp" alt="phone" />
+            </div>
+            <div class="txt">
+              <h5>Realme 10 Pro+ 5G (Nebula Blue, 256 GB) (8 GB RAM)</h5>
+              <a>Write a product review</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="stars">
+          <h3>Rate Seller</h3>
+          <div class="star">
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <form class="feedback">
+          <div class="yesno">
+            <h4>Item as described by the seller?</h4>
+            <div class="input">
+              <input type="radio" />Yes <input type="radio" />No
+            </div>
+          </div>
+          <div class="comment">
+            <h4>Comments:</h4>
+            <textarea
+              name="comment"
+              id="comment"
+              placeholder="Please enter comments here about your expreience with this seller."
+              cols="70"
+              rows="5"
+              maxlength="400"
+            ></textarea>
+          </div>
+          <div class="upload">
+            <h4>Upload Item Images:</h4>
+            <input type="text" />
+          </div>
+          <div class="btn">
+            <input type="submit" />
+          </div>
+        </form>
+      </section>
+    </div>
+  </body>
+</html>
