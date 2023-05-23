@@ -25,7 +25,7 @@ class Employee {
   }
 }
 
-var a = new Employee("Smit", 64, 120000, 4);
+var a = new Employee("Sahil", 56, 120000, 4);
 a.display();
 a.addincrement();
 a.display();
