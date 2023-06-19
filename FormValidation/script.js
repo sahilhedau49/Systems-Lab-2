@@ -76,5 +76,8 @@ function validateForm() {
   if (!isValid) {
     alert(errorMessages);
     return false;
+  } else {
+    alert("From submitted successfully!");
+    return true;
   }
 }
