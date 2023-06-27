@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Form</title>
+  </head>
+  <body>
+    <div class="form">
+      <h2>Event Registration</h2>
+      <form id="registrationForm" onsubmit="validateForm(event)">
+        <div class="main-form">
+          <div class="left">
+            <input
+              type="text"
+              name="firstName"
+              id="firstName"
+              placeholder="First Name"
+              required
+            />
+            <input
+              type="text"
+              name="lastName"
+              id="lastName"
+              placeholder="Last Name"
+              required
+            />
+            <input type="text" name="college" placeholder="College" />
+            <input type="text" name="dept" placeholder="Dept" />
+            <textarea
+              name="address"
+              id="address"
+              cols="20"
+              rows="5"
+              placeholder="Address"
+            ></textarea>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
+              placeholder="Phone Number"
+            />
+            <span class="gender">
+              <span class="temp">Gender : </span>
+              <div>
+                <input
+                  type="radio"
+                  name="gender"
+                  id="male"
+                  value="male"
+                  required
+                />
+                <label for="male">Male</label>
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  name="gender"
+                  id="female"
+                  value="female"
+                  required
+                />
+                <label for="female">Female</label>
+              </div>
+            </span>
+            <span class="Programme">
+              <span class="temp">Programme : </span>
+              <div>
+                <input
+                  type="radio"
+                  name="programme"
+                  id="btech"
+                  value="btech"
+                  required
+                />
+                <label for="btech">B.Tech</label>
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  name="programme"
+                  id="mtech"
+                  value="mtech"
+                  required
+                />
+                <label for="mtech">M.Tech</label>
+              </div>
+            </span>
+          </div>
+
+          <div class="right">
+            <span class="class">
+              <label for="class" class="temp" class="temp">Class</label>
+              <select name="class" id="class" required>
+                <option value="" hidden></option>
+                <option value="IX">IX</option>
+                <option value="X">X</option>
+                <option value="XI">XI</option>
+                <option value="XII">XII</option>
+              </select>
+            </span>
+            <span class="City">
+              <label for="city" class="temp">City</label>
+              <select name="city" id="city" required>
+                <option value="" hidden></option>
+                <option value="Nagpur">Nagpur</option>
+                <option value="Aurangabad">Aurangabad</option>
+                <option value="Shimla">Shimla</option>
+                <option value="Tamil Nadu">Tamil Nadu</option>
+              </select>
+            </span>
+            <span class="State">
+              <label for="state" class="temp">State</label>
+              <select name="state" id="state" required>
+                <option value="" hidden></option>
+                <option value="Maharashtra">Maharashtra</option>
+                <option value="Madhya Pradesh">Madhya Pradesh</option>
+                <option value="Punjab">Punjab</option>
+                <option value="Rajasthan">Rajasthan</option>
+              </select>
+            </span>
+            <span class="event">
+              <p class="temp">EVENT :</p>
+              <div>
+                <input
+                  type="checkbox"
+                  name="event"
+                  id="event1"
+                  value="event1"
+                />
+                <label for="event1">EVENT 1</label>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  name="event"
+                  id="event2"
+                  value="event2"
+                />
+                <label for="event2">EVENT 2</label>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  name="event"
+                  id="event3"
+                  value="event3"
+                />
+                <label for="event3">EVENT 3</label>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  name="event"
+                  id="event4"
+                  value="event4"
+                />
+                <label for="event4">EVENT 4</label>
+              </div>
+            </span>
+            <input type="text" name="amountPaid" placeholder="Amount Paid" />
+            <input
+              type="text"
+              name="transactionId"
+              placeholder="Transaction ID"
+            />
+            <span class="Professional">
+              <p class="temp">Professional :</p>
+              <div>
+                <input
+                  type="checkbox"
+                  name="professional"
+                  id="cse"
+                  value="cse"
+                />
+                <label for="cse">CSE</label>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  name="professional"
+                  id="icse"
+                  value="icse"
+                />
+                <label for="icse">ICSE</label>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  name="professional"
+                  id="istc"
+                  value="istc"
+                />
+                <label for="istc">ISTC</label>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  name="professional"
+                  id="ist"
+                  value="ist"
+                />
+                <label for="ist">IST</label>
+              </div>
+            </span>
+          </div>
+        </div>
+
+        <div class="btns">
+          <span class="btns-1">
+            <button type="reset">Reset</button>
+            <button type="button" onclick="validateForm()">Ok</button>
+          </span>
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+
+    <script>
+      function validateForm(event) {
+        event.preventDefault();
+
+        // Retrieve form values
+        const form = document.getElementById("registrationForm");
+        const firstName = form.elements["firstName"].value.trim();
+        const lastName = form.elements["lastName"].value.trim();
+        const phone = form.elements["phone"].value.trim();
+        const address = form.elements["address"].value.trim();
+        const classSelection = form.elements["class"].value;
+        const citySelection = form.elements["city"].value;
+        const stateSelection = form.elements["state"].value;
+        const selectedEvents = Array.from(form.elements["event"]).filter(
+          (event) => event.checked
+        );
+        const amountPaid = form.elements["amountPaid"].value.trim();
+        const transactionId = form.elements["transactionId"].value.trim();
+        const selectedProfessionals = Array.from(
+          form.elements["professional"]
+        ).filter((professional) => professional.checked);
+
+        // Perform validation
+        if (firstName === "") {
+          alert("Please enter your First Name.");
+          return;
+        }
+
+        if (lastName === "") {
+          alert("Please enter your Last Name.");
+          return;
+        }
+
+        if (phone === "") {
+          alert("Please enter your Phone Number.");
+          return;
+        }
+
+        if (address === "") {
+          alert("Please enter your Address.");
+          return;
+        }
+
+        if (classSelection === "") {
+          alert("Please select your Class.");
+          return;
+        }
+
+        if (citySelection === "") {
+          alert("Please select your City.");
+          return;
+        }
+
+        if (stateSelection === "") {
+          alert("Please select your State.");
+          return;
+        }
+
+        if (selectedEvents.length === 0) {
+          alert("Please select at least one Event.");
+          return;
+        }
+
+        if (amountPaid === "") {
+          alert("Please enter the Amount Paid.");
+          return;
+        }
+
+        if (transactionId === "") {
+          alert("Please enter the Transaction ID.");
+          return;
+        }
+
+        if (selectedProfessionals.length === 0) {
+          alert("Please select at least one Professional.");
+          return;
+        }
+
+        // If all validation checks pass, you can submit the form
+        form.submit();
+      }
+    </script>
+  </body>
+</html>
