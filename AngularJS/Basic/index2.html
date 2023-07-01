@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <body>
+    <div ng-app="myApp" ng-controller="myCtrl">
+      Sorting weekdays in alphabetical order:
+      <ul ng-repeat="ds in weekDays | orderBy : 'days'">
+        <li>{{ds.days}}</li>
+      </ul>
+      <br />
+
+      Sorting weekdays in reverse alphabetical order:
+      <ul ng-repeat="ds in weekDays | orderBy : 'days':'true'">
+        <li>{{ds.days}}</li>
+      </ul>
+    </div>
+    <script>
+      var app = angular.module("myApp", []);
+      app.controller("myCtrl", function ($scope) {
+        $scope.weekDays = [
+          { days: "Monday" },
+          { days: "Tuesday" },
+          { days: "Wednesday" },
+          { days: "Thursday" },
+          { days: "Friday" },
+          { days: "Saturday" },
+          { days: "Sunday" },
+        ];
+      });
+    </script>
+     
+  </body>
+</html>
