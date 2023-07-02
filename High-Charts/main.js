@@ -1,22 +1,71 @@
-const fs = require("fs");
+Highcharts.chart('container', {
+  chart: {
+      type: 'column',
+      options3d: {
+          enabled: true,
+          alpha: 15,
+          beta: 15,
+          viewDistance: 25,
+          depth: 40
+      }
+  },
 
-// converting a JS object to JSON
-const user = {
-  id: 56,
-  completeName: "Sahil Hedau",
-  age: 19,
-};
+  title: {
+      text: ' Electricity production in countries, grouped by continent',
+      align: 'left'
+  },
 
-const data = JSON.stringify(user);
+  xAxis: {
+      labels: {
+          skew3d: true,
+          style: {
+              fontSize: '16px'
+          }
+      }
+  },
 
-try {
-  // reading a JSON file synchronously
-  fs.writeFile("data.json", data);
-} catch (error) {
-  // logging the error
-  console.error(error);
-  throw error;
-}
+  yAxis: {
+      allowDecimals: false,
+      min: 0,
+      title: {
+          text: 'TWh',
+          skew3d: true,
+          style: {
+              fontSize: '16px'
+          }
+      }
+  },
 
-// logging the outcome
-console.log("data.json written correctly");
+  tooltip: {
+      headerFormat: '<b>{point.key}</b><br>',
+      pointFormat: '<span style="color:{series.color}">\u25CF</span> {series.name}: {point.y} / {point.stackTotal}'
+  },
+
+  plotOptions: {
+      series: {
+          pointStart: 2016
+      },
+      column: {
+          stacking: 'normal',
+          depth: 40
+      }
+  },
+
+  series: [{
+      name: 'South Korea',
+      data: [563, 567, 590, 582, 571],
+      stack: 'Asia'
+  }, {
+      name: 'Germany',
+      data: [650, 654, 643, 612, 572],
+      stack: 'Europe'
+  }, {
+      name: 'Saudi Arabia',
+      data: [368, 378, 378, 367, 363],
+      stack: 'Asia'
+  }, {
+      name: 'France',
+      data: [564, 562, 582, 571, 533],
+      stack: 'Europe'
+  }]
+});
