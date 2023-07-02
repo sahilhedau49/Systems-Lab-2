@@ -36,7 +36,7 @@ input {
   margin: 5px;
   border: 2px solid #fff;
   background-color: #ffffff00;
-  transition: 0.5s;
+  transition: 0.1s;
   color: #fff;
   border-radius: 4px;
   margin-top: 10px;
@@ -53,12 +53,12 @@ textarea {
   border-radius: 4px;
   margin-top: 10px;
 }
-textarea:hover,
-textarea:active,
-input:hover,
-input:active {
+
+textarea:focus,
+input:focus {
   outline: none;
-  border: 2px dashed #fff;
+  border: none;
+  box-shadow: 2px 2px 5px #fff;
 }
 .right span,
 .left span {
