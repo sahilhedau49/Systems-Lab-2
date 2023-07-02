@@ -2,9 +2,9 @@ const fs = require("fs");
 
 // converting a JS object to JSON
 const user = {
-  id: 2,
-  completeName: "Hello WOrld",
-  age: 10,
+  id: 56,
+  completeName: "Sahil Hedau",
+  age: 19,
 };
 
 const data = JSON.stringify(user);
@@ -15,7 +15,6 @@ try {
 } catch (error) {
   // logging the error
   console.error(error);
-
   throw error;
 }
 
