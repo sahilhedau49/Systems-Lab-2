@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.min.js"></script>
+    <title>Document</title>
+    <style>
+      table,
+      tr,
+      td {
+        border: 2px solid #000;
+        border-collapse: collapse;
+        padding: 15px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <div ng-app="">
+    <p>Name : <input type="text" ng-model="name"></p>
+    <p ng-bind="name"></p>
+  </div> -->
+
+    <!-- <div ng-app="" ng-init="firstName='John'">
+    <p>The name is : <span ng-bind="firstName"></span></p>
+  </div> -->
+
+    <!-- <div ng-app="" ng-init="colr">
+    <p>NUM1 : <input type="number" ng-model="name"></p>
+    <p>NUM2 : <input type="number" ng-model="name1"></p>
+    <p>SUM: {{name + name1}}</p>
+    <p>MINUS: {{name - name1}}</p>
+    <p>DIVISION: {{name / name1}}</p>
+    <p>MULTIPLICATION: {{name * name1}}</p>
+    <p>COLOR: <input type="text" ng-model="colr"></p>
+    <p >The Color is : <span style="background-color: {{colr}}; padding: 10px; ">{{colr}}</span></p>
+  </div> -->
+
+    <div ng-app="myApp" ng-controller="myCtrl">
+      <!-- College Name: <input type="text" ng-model="colname"><br>
+    <br>
+    Welcome to : {{colname}}
+
+    <br><br>
+    Sorting the weekdays in alphabetical order:
+    <ul ng-repeat="ds in weekDays | orderBy : 'days'">
+      <li>{{ds.days}}</li>
+    </ul>
+
+    <br><br>
+    Sorting the weekdays in Reverse alphabetical order:
+    <ul ng-repeat="ds in weekDays | orderBy : 'days' : true">
+      <li>{{ds.days}}</li>
+    </ul> -->
+      <!-- student in students -->
+      <!-- name gender exp qualitfication -->
+      <table>
+        <thead>
+          <th>
+            <tr>
+              <td>Name</td>
+              <td>Gender</td>
+              <td>Male</td>
+              <td>Qualification</td>
+            </tr>
+          </th>
+        </thead>
+
+        <tbody>
+          <tr ng-repeat="teacher in teachers">
+            <td>{{teacher.name}}</td>
+            <td>{{teacher.gender}}</td>
+            <td>{{teacher.exp}}</td>
+            <td>{{teacher.qual}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <script>
+      var app = angular.module("myApp", []);
+      app.controller("myCtrl", function ($scope) {
+        $scope.colname = "RCOEM";
+        $scope.weekDays2 = ["Monday", "Tuesday", "Wednesday"];
+        $scope.weekDays = [
+          { days: "Monday" },
+          { days: "Tuesday" },
+          { days: "Wednesday" },
+          { days: "Thursday" },
+          { days: "Friday" },
+          { days: "Saturday" },
+          { days: "Sunday" },
+        ];
+        $scope.teachers = [
+          {
+            name: "Prof. Avinash J Agrawal",
+            gender: "Male",
+            exp: 24,
+            qual: " M.Tech and Ph.D. ",
+          },
+          {
+            name: "Dr. Manoj B Chandak",
+            gender: "Male",
+            exp: 25,
+            qual: "ME and Ph.D",
+          },
+          {
+            name: "Prof. Aarti Manish Karandikar",
+            gender: "Female",
+            exp: 18,
+            qual: "M.Tech and Ph.D",
+          },
+          {
+            name: "Dr. Ramchand Hablani",
+            gender: "Male",
+            exp: 23,
+            qual: "ME and Ph.D",
+          },
+        ];
+      });
+    </script>
+
+    <!-- <div ng-app="">
+<p>My first expression: {{ 5 + 5 }}</p>
+</div> -->
+  </body>
+</html>

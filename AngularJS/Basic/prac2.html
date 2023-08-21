@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.min.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div ng-app="myApp" ng-controller="myCrtl">
+      <div>
+        <input type="text" ng-model="name" />
+        <p ng-bind="name"></p>
+        <p>{{name}}</p>
+      </div>
+      <div>
+        <table>
+          <thead>
+            <th>
+              <tr>
+                <td>Name</td>
+                <td>Gender</td>
+                <td>Male</td>
+                <td>Qualification</td>
+              </tr>
+            </th>
+          </thead>
+          <tbody>
+            <tr ng-repeat="teacher in teachers">
+              <td>{{teacher.name}}</td>
+              <td>{{teacher.gender}}</td>
+              <td>{{teacher.exp}}</td>
+              <td>{{teacher.qual}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div>
+        <p ng-repeat="num in numbers | orderBy:'number'">{{num.number}}</p>
+      </div>
+    </div>
+
+    <script>
+      var app = angular.module("myApp", []);
+      app.controller("myCrtl", function ($scope) {
+        $scope.teachers = [
+          {
+            name: "sahil",
+            gender: "male",
+            exp: 10,
+            qual: "btech",
+          },
+          {
+            name: "sahil",
+            gender: "male",
+            exp: 10,
+            qual: "btech",
+          },
+          {
+            name: "sahil",
+            gender: "male",
+            exp: 10,
+            qual: "btech",
+          },
+        ];
+        $scope.numbers = [
+          {
+            number: 3,
+          },
+          {
+            number: 6,
+          },
+          {
+            number: 2,
+          },
+          {
+            number: 7,
+          },
+          {
+            number: 9,
+          },
+          {
+            number: 1,
+          },
+        ];
+      });
+    </script>
+  </body>
+</html>
